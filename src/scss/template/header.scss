@@ -1,0 +1,55 @@
+
+Header {
+  background: linear-gradient(to bottom, #782a0b 50%, #fdc801 50%);
+  ul {
+    height: 5rem;
+  }
+  li {
+    padding: 0 1rem;
+    margin-top: .5rem;
+  }
+}
+
+.Header-left {
+  background: white;
+  width: calc((100vw - var(--grid-maxWidth) + 400px) / 2);
+}
+
+.Logo {
+  padding: 1.3rem 0 1.2rem;
+}
+
+.Header-right {
+  width: calc(13 * var(--grid-maxWidth) / 16);
+  position: relative;
+  overflow: hidden;
+  a {
+    color: #ffffff;;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid white;
+    border-left: 50px solid white;
+    border-bottom: 50px solid transparent;
+  }
+}
+
+.Nav {
+  a {
+    color: #782a0b;;
+  }
+}
+
+.Nav-Lang {
+  span {
+    vertical-align: top;
+    margin-top: .4rem;
+    display: inline-block;
+  }
+}

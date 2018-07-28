@@ -1,0 +1,50 @@
+@import "~inuit-css";
+
+:root {
+  --primary-color: #82f451;
+  --secondary-color: #5A6169;
+  --link-color: #538BF4;
+  --fontPrimary--color: #434343;
+  --lightGrey-color: #E9ECEF;
+  --darkGrey-color: #8FA4B8;
+  --dark-color: #5A6169;
+  --active-color: #007BFF;
+  --grid-maxWidth: 1200px;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (min-width: 36rem) {
+      @content
+    }
+  } @else if $breakpoint == "medium" {
+    @media (min-width: 45rem) {
+      @content
+    }
+  } @else if $breakpoint == "large" {
+    @media (min-width: 920px) {
+      @content
+    }
+  }
+}
+
+body {
+  //font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+h2 {
+  font-weight: 100;
+}
+
+p {
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+@import "template/header";
+@import "template/home";
+
+
