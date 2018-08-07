@@ -2060,8 +2060,8 @@ button[disabled], button[disabled]:hover, input[disabled], input[disabled]:hover
     display: none; } }
 
 :root {
-  --primary-color: #82f451;
-  --secondary-color: #5A6169;
+  --primary-color: #fdc800;
+  --secondary-color: #fdc800;
   --link-color: #538BF4;
   --fontPrimary--color: #434343;
   --lightGrey-color: #E9ECEF;
