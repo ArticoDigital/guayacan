@@ -12,6 +12,7 @@
   right: 0;
 }
 
+
 .Home-contact {
   position: absolute;
   background: url("../images/home-contact.png") repeat center;
@@ -44,7 +45,7 @@
 .Map-svgButtons {
   position: absolute;
   right: 3rem;
-  bottom: 6rem;
+  top: 4rem;
   button {
     max-width: 5rem;
     display: block;
@@ -80,7 +81,7 @@
 .Home-why {
   background: url("../images/texturamarilla.png") repeat;
   position: relative;
-  h2{
+  h2 {
     position: relative;
     z-index: 20;
     text-align: center;
@@ -90,22 +91,22 @@
     width: 680px;
     margin: auto;
   }
-  svg{
+  svg {
     margin: 0 auto 1rem;
     display: block;
 
   }
-  p{
+  p {
     line-height: 1em;
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
   }
-  li{
+  li {
     min-width: 14.8rem;
     padding: 4rem 3rem 0;
   }
-  .container{
+  .container {
     position: relative;
     z-index: 11;
   }
@@ -119,6 +120,7 @@
   top: -16.5rem;
   z-index: 10;
 }
+
 .Home-whyBottom {
   background: url("../images/intermedioamarillo.png") repeat center;
   width: 100%;
@@ -128,30 +130,31 @@
   z-index: 10;
   transform: rotate(180deg);
 }
-.Home-blog{
+
+.Home-blog {
   background: url("../images/texturagris.png") repeat center;
-  h2{
+  h2 {
     padding-top: 10rem;
     text-align: center;
     color: #FF281F;
     font-size: 6rem;
     margin-bottom: 4rem;
   }
-  h3{
+  h3 {
     margin: 0 0 .8rem;
     line-height: 1.1;
     color: #782a0b;
   }
-  hr{
+  hr {
     background: #fdc801;
     margin: 2.1rem 0 2.1rem 1.3rem;
   }
 
-  p{
+  p {
     line-height: 1.1;
   }
 
-  a{
+  a {
     display: inline-block;
     background: #FF281F;
     padding: .4rem 4rem;
@@ -160,13 +163,15 @@
     margin-bottom: 1rem;
   }
 }
-.Home-blogNew{
+
+.Home-blogNew {
   position: relative;
 }
-.Home-blogNewText{
+
+.Home-blogNewText {
   padding: 1.2rem 2.2rem;
   max-width: 90%;
-  margin-left: 5% ;
+  margin-left: 5%;
   background: #ffffffe6;
   position: relative;
   width: 100%;

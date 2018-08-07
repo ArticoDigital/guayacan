@@ -18,8 +18,8 @@ add_action('init', 'register_my_menus');
 function register_my_menus()
 {
     register_nav_menus([
-        'menuHeader' => __('Menu Header'),
-        'menuFooter' => __('Menu Footer'),
+        'header-menu' => __('Header Menu'),
+        'footer-menu' => __('Footer Menu'),
     ]);
 }
 
