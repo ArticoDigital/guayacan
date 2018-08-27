@@ -18,7 +18,7 @@ export default function (idMap) {
             }
         }
     });
-    MapAmerica.zoom(3);
+    MapAmerica.zoom(4);
 
     document.querySelector('#zoomInMap').addEventListener('click', function () {
         MapAmerica.zoomIn();

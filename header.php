@@ -24,13 +24,14 @@
     ?>"/>
     <?php wp_head() ?>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_red.css"
 </head>
 <body <?php body_class(); ?> data-url="<?php echo site_url(); ?>" id="body">
 <header>
     <div class="Header-container row ">
         <div class="Header-left row justify-end">
             <figure class="Logo row align-center">
-                <img src="<?php bloginfo('template_url'); ?>/public/images/logo.png" alt="">
+                <a href="/"><img src="<?php bloginfo('template_url'); ?>/public/images/logo.png" alt=""></a>
             </figure>
         </div>
         <div class="Header-right">
@@ -92,10 +93,7 @@
                         </ul>
                     </div>
                     <nav class="row justify-end Nav">
-                        <ul class="is-list-less row align-center">
-                            <li><a href="">Menu 1</a></li>
-                            <li><a href="">Menu 2</a></li>
-                        </ul>
+                        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' )  ); ?>
                     </nav>
                 </div>
             </div>
