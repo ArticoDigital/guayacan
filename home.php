@@ -1,7 +1,11 @@
 <?php get_header(); ?>
     <main>
         <div class="Revolution-home">
+<<<<<<< HEAD
             <?php echo do_shortcode("[rev_slider alias='main-header4']"); ?>
+=======
+            <?php echo do_shortcode("[rev_slider alias='home']"); ?>
+>>>>>>> 7bd87cb7f54fe20c2c861e607845727cb5197d68
             <div class="landscape-center">
                 <img src="<?php bloginfo('template_url'); ?>/public/images/imgparalaxcentro.png" alt="">
             </div>
@@ -912,7 +916,10 @@
         </section>
 
     </main>
+<<<<<<< HEAD
 <aside >
 
 </aside>
+=======
+>>>>>>> 7bd87cb7f54fe20c2c861e607845727cb5197d68
 <?php get_footer();
