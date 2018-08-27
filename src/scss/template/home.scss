@@ -57,8 +57,69 @@
   }
 }
 
-#Choachi:hover {
-  fill: red
+#Choachi{
+  cursor: pointer;
+  &:hover {
+    fill: red
+  }
+}
+
+.Modal-info{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.8);
+  display: none;
+  z-index: 1000;
+  &.show{
+    display: flex;
+  }
+}
+.Modal-close{
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  color: white;
+  font-size: 4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.Modal-infoContainer{
+  background: white;
+  padding: 3rem;
+  border-radius: .5rem;
+  max-width: 90%;
+  width: 80rem;
+  h4{
+    font-weight: 400;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #FF281F;
+    text-shadow: .4rem .2rem #fdc801;
+    line-height: 1em;
+  }
+  h5{
+    font-size: 2.4rem;
+    line-height: 1em;
+    color: #782a0b;
+  }
+  a{
+    background: #fdc801;
+    color: #782a0b;
+    padding: .4rem 6rem .3rem;
+    border-radius: .4rem
+  }
+  p{
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 1.6rem 0;
+  }
+}
+.Modal-infoText{
+  padding-right: 3rem;
 }
 
 .Home-video {

@@ -63,9 +63,8 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77,24 +76,28 @@ var _ZoomMap = __webpack_require__(2);
 
 var _ZoomMap2 = _interopRequireDefault(_ZoomMap);
 
-var _flatpickr = __webpack_require__(17);
+var _flatpickr = __webpack_require__(3);
 
 var _flatpickr2 = _interopRequireDefault(_flatpickr);
 
-var _animatedScrollTo = __webpack_require__(22);
+var _animatedScrollTo = __webpack_require__(4);
 
 var _animatedScrollTo2 = _interopRequireDefault(_animatedScrollTo);
 
-var _es = __webpack_require__(21);
+var _es = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 if (document.querySelector('#svg-id')) (0, _ZoomMap2.default)('#svg-id');
 if (document.querySelector('#Choachi')) {
-    var choachi = document.querySelector('#Choachi');
-    console.log(choachi);
+    var choachi = document.querySelector('#Choachi'),
+        modal = document.querySelector('.Modal-info'),
+        modalClose = document.querySelector('.Modal-close');
     choachi.addEventListener('click', function () {
-        console.log('raro');
+        modal.classList.add('show');
+    });
+    modalClose.addEventListener('click', function () {
+        modal.classList.remove('show');
     });
 }
 (0, _flatpickr2.default)(".datePicker", { "locale": _es.Spanish });
@@ -104,15 +107,75 @@ document.querySelector('.contactID').addEventListener('click', function () {
 });
 
 /***/ }),
-
-/***/ 1:
+/* 1 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 17:
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function (idMap) {
+
+    var MapAmerica = svgPanZoom(idMap, {
+        zoomEnabled: true,
+        controlIconsEnabled: false,
+        fit: 1,
+        center: true, minZoom: 1,
+        maxZoom: 20,
+        dblClickZoomEnabled: true,
+        mouseWheelZoomEnabled: false,
+        preventMouseEventsDefault: false,
+        beforePan: beforePan,
+        customEventsHandler: {
+            init: function init(options) {},
+            destroy: function destroy() {
+                this.hammer.destroy();
+            }
+        }
+    });
+    MapAmerica.zoom(4);
+
+    document.querySelector('#zoomInMap').addEventListener('click', function () {
+        MapAmerica.zoomIn();
+    });
+    document.querySelector('#zoomOutMap').addEventListener('click', function () {
+        MapAmerica.zoomOut();
+    });
+    document.querySelector('#zoomResetMap').addEventListener('click', function () {
+
+        MapAmerica.zoom(3);
+        MapAmerica.center();
+    });
+
+    function beforePan(oldPan, newPan) {
+
+        var gutterWidth = 500,
+            gutterHeight = 500,
+            sizes = this.getSizes(),
+            leftLimit = -((sizes.viewBox.x + sizes.viewBox.width) * sizes.realZoom) + gutterWidth,
+            rightLimit = sizes.width - gutterWidth - sizes.viewBox.x * sizes.realZoom,
+            topLimit = -((sizes.viewBox.y + sizes.viewBox.height) * sizes.realZoom) + gutterHeight,
+            bottomLimit = sizes.height - gutterHeight - sizes.viewBox.y * sizes.realZoom;
+        var customPan = {};
+        customPan.x = Math.max(leftLimit, Math.min(rightLimit, newPan.x));
+        customPan.y = Math.max(topLimit, Math.min(bottomLimit, newPan.y));
+        return customPan;
+    }
+};
+
+;
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* flatpickr v4.5.1, @license MIT */
@@ -2274,112 +2337,7 @@ document.querySelector('.contactID').addEventListener('click', function () {
 
 
 /***/ }),
-
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function (idMap) {
-
-    var MapAmerica = svgPanZoom(idMap, {
-        zoomEnabled: true,
-        controlIconsEnabled: false,
-        fit: 1,
-        center: true, minZoom: 1,
-        maxZoom: 20,
-        dblClickZoomEnabled: true,
-        mouseWheelZoomEnabled: false,
-        preventMouseEventsDefault: false,
-        beforePan: beforePan,
-        customEventsHandler: {
-            init: function init(options) {},
-            destroy: function destroy() {
-                this.hammer.destroy();
-            }
-        }
-    });
-    MapAmerica.zoom(4);
-
-    document.querySelector('#zoomInMap').addEventListener('click', function () {
-        MapAmerica.zoomIn();
-    });
-    document.querySelector('#zoomOutMap').addEventListener('click', function () {
-        MapAmerica.zoomOut();
-    });
-    document.querySelector('#zoomResetMap').addEventListener('click', function () {
-
-        MapAmerica.zoom(3);
-        MapAmerica.center();
-    });
-
-    function beforePan(oldPan, newPan) {
-
-        var gutterWidth = 500,
-            gutterHeight = 500,
-            sizes = this.getSizes(),
-            leftLimit = -((sizes.viewBox.x + sizes.viewBox.width) * sizes.realZoom) + gutterWidth,
-            rightLimit = sizes.width - gutterWidth - sizes.viewBox.x * sizes.realZoom,
-            topLimit = -((sizes.viewBox.y + sizes.viewBox.height) * sizes.realZoom) + gutterHeight,
-            bottomLimit = sizes.height - gutterHeight - sizes.viewBox.y * sizes.realZoom;
-        var customPan = {};
-        customPan.x = Math.max(leftLimit, Math.min(rightLimit, newPan.x));
-        customPan.y = Math.max(topLimit, Math.min(bottomLimit, newPan.y));
-        return customPan;
-    }
-};
-
-;
-
-/***/ }),
-
-/***/ 21:
-/***/ (function(module, exports, __webpack_require__) {
-
-/* flatpickr v4.5.1, @license MIT */
-(function (global, factory) {
-     true ? factory(exports) :
-    typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (factory((global.es = {})));
-}(this, (function (exports) { 'use strict';
-
-    var fp = typeof window !== "undefined" && window.flatpickr !== undefined ? window.flatpickr : {
-      l10ns: {}
-    };
-    var Spanish = {
-      weekdays: {
-        shorthand: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
-        longhand: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
-      },
-      months: {
-        shorthand: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
-        longhand: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-      },
-      ordinal: function ordinal() {
-        return "º";
-      },
-      firstDayOfWeek: 1,
-      rangeSeparator: " a "
-    };
-    fp.l10ns.es = Spanish;
-    var es = fp.l10ns;
-
-    exports.Spanish = Spanish;
-    exports.default = es;
-
-    Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
-
-
-/***/ }),
-
-/***/ 22:
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function() {
@@ -2609,7 +2567,46 @@ exports.default = function (idMap) {
 }).call(this);
 
 
-/***/ })
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/******/ });
+/* flatpickr v4.5.1, @license MIT */
+(function (global, factory) {
+     true ? factory(exports) :
+    typeof define === 'function' && define.amd ? define(['exports'], factory) :
+    (factory((global.es = {})));
+}(this, (function (exports) { 'use strict';
+
+    var fp = typeof window !== "undefined" && window.flatpickr !== undefined ? window.flatpickr : {
+      l10ns: {}
+    };
+    var Spanish = {
+      weekdays: {
+        shorthand: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
+        longhand: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+      },
+      months: {
+        shorthand: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+        longhand: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+      },
+      ordinal: function ordinal() {
+        return "º";
+      },
+      firstDayOfWeek: 1,
+      rangeSeparator: " a "
+    };
+    fp.l10ns.es = Spanish;
+    var es = fp.l10ns;
+
+    exports.Spanish = Spanish;
+    exports.default = es;
+
+    Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
+
+
+/***/ })
+/******/ ]);
 //# sourceMappingURL=main.js.map
