@@ -2262,7 +2262,7 @@ Header {
     font-size: 5rem;
     text-transform: uppercase;
     color: #FF281F;
-    text-shadow: .4rem .2rem #fdc801;
+    text-shadow: .4rem .2rem;
     line-height: 1em; }
   .Modal-infoContainer h5 {
     font-size: 2.4rem;
@@ -2588,6 +2588,44 @@ footer {
 .Blog {
   padding: 5rem; }
   .Blog > div {
-    padding: 3rem; }
+    padding: 0 2rem; }
+
+.Blog-newsletter {
+  background: #fdc801;
+  padding: 2rem; }
+  .Blog-newsletter h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #782a0b; }
+  .Blog-newsletter p {
+    margin: 2.4rem 0;
+    font-size: 1.4rem;
+    line-height: 1em; }
+  .Blog-newsletter input {
+    border: .2rem solid gray !important;
+    margin: auto;
+    font-family: 'Roboto', sans-serif !important;
+    font-style: oblique;
+    border-radius: 0 !important; }
+  .Blog-newsletter button {
+    background: #782a0b;
+    margin: 2rem auto 0;
+    font-family: 'Permanent Marker', cursive;
+    padding: .1rem 3rem .2rem;
+    min-height: auto;
+    border-radius: 1.5rem;
+    color: #fdc801; }
+
+.Blog-postRecent {
+  margin-top: 1rem;
+  background: #782a0b;
+  padding: 2rem; }
+  .Blog-postRecent h2 {
+    color: #fdc801;
+    font-size: 2rem; }
+  .Blog-postRecent h3 {
+    color: white;
+    font-size: 1.6rem; }
 
 /*# sourceMappingURL=main.css.map*/
