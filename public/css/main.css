@@ -2585,4 +2585,9 @@ footer {
   display: inline-block;
   vertical-align: middle; }
 
+.Blog {
+  padding: 5rem; }
+  .Blog > div {
+    padding: 3rem; }
+
 /*# sourceMappingURL=main.css.map*/
