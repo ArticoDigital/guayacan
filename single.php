@@ -4,35 +4,48 @@
 
 get_header(); ?>
 
-    <div class="inner-heading">
-        <div class="container">
+    <section class="row container margin-top-40 margin-bottom-40">
+        <div class="col-16 col-l-10 Blog-container">
+            <?php
+            while (have_posts()) :
+            the_post(); ?>
+            <img src="<?php the_post_thumbnail_url('large'); ?>" alt="Blog Title">
             <h3><?php the_title() ?></h3>
+            <?php the_content() ?>
         </div>
-    </div>
+        <?php endwhile; ?>
 
-    <div class="inner-content">
-        <div class="container">
-            <?php while (have_posts()) : the_post();?>
-            <!-- Blog List start -->
-            <div class="blogWraper blogdetail">
-                <ul class="blogList">
-                    <li>
-                        <div class="postimg"><img src="<?php the_post_thumbnail_url(); ?>" alt="Blog Title">
-                            <div class="date"><?php echo the_date('d M'); ?></div>
-                        </div>
-                        <div class="post-header margin-top30">
-                            <h4><?php the_title() ?></h4>
-                            <div class="postmeta">Por : <span><?php the_author() ?> </span> </div>
-                        </div>
-                        <?php the_content() ?>
-                    </li>
-                </ul>
-            </div>
-    <?php endwhile; ?>
+
+        <div class="col-16 col-l-6">
+            <article class="Blog-newsletter">
+                <h2>suscríbase a nuestro blog</h2>
+                <p>
+                    Suscribase con su correo eléctronico a nuestro blog y reciba notificaciones de nuestros post y
+                    noticias.
+                </p>
+                <input type="text" placeholder="correo eléctronico">
+                <div class="row justify-center">
+                    <button type="submit">inscribirse</button>
+                </div>
+            </article>
+            <article class="Blog-postRecent">
+                <h2>Post recientes</h2>
+                <?php
+                $the_query = new WP_Query(array('posts_per_page' => 5));
+                while ($the_query->have_posts()): $the_query->the_post(); ?>
+                    <div class="row Blog-postRecentItem  middle-items">
+                        <figure class="col-7">
+                            <img class="fit" src="<?php echo  get_the_post_thumbnail_url(); ?>" alt="Blog Title">
+                        </figure>
+                        <h3 class="col-9"><?php the_title() ?></h3>
+                    </div>
+                <?php
+                endwhile;
+                wp_reset_query();
+                ?>
+            </article>
         </div>
-    </div>
-
-
+    </section>
 <?php
 //get_sidebar();
 get_footer();

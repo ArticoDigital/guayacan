@@ -84,27 +84,67 @@ var _animatedScrollTo = __webpack_require__(4);
 
 var _animatedScrollTo2 = _interopRequireDefault(_animatedScrollTo);
 
+var _modal = __webpack_require__(23);
+
+var _modal2 = _interopRequireDefault(_modal);
+
 var _es = __webpack_require__(5);
+
+var _ToggleInput = __webpack_require__(6);
+
+var _ToggleInput2 = _interopRequireDefault(_ToggleInput);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 if (document.querySelector('#svg-id')) (0, _ZoomMap2.default)('#svg-id');
 if (document.querySelector('#Choachi')) {
-    var choachi = document.querySelector('#Choachi'),
+    var mapClick = document.querySelectorAll('.Map-click'),
         modal = document.querySelector('.Modal-info'),
         modalClose = document.querySelector('.Modal-close');
-    choachi.addEventListener('click', function () {
-        modal.classList.add('show');
+    mapClick.forEach(function (el) {
+        el.addEventListener('click', function () {
+            modal.classList.add('show');
+            (0, _modal2.default)(el.dataset.city);
+        });
     });
     modalClose.addEventListener('click', function () {
         modal.classList.remove('show');
     });
 }
-(0, _flatpickr2.default)(".datePicker", { "locale": _es.Spanish });
+(0, _flatpickr2.default)(".datePicker", {
+    "locale": _es.Spanish
+});
 
 document.querySelector('.contactID').addEventListener('click', function () {
     (0, _animatedScrollTo2.default)(document.querySelector('footer'));
 });
+var Form = document.querySelector('#FormReserve');
+if (Form) {
+
+    (0, _ToggleInput2.default)({
+        name: 'language',
+        id: 'langNew',
+        value: 'otro'
+    });
+
+    (0, _ToggleInput2.default)({
+        name: 'travel',
+        id: 'grupo',
+        value: 'grupo'
+    });
+
+    (0, _ToggleInput2.default)({
+        name: 'advisory',
+        id: 'otro',
+        value: 'otro'
+    });
+
+    (0, _ToggleInput2.default)({
+        name: 'translate',
+        id: 'LangT',
+        value: 'si'
+    });
+}
 
 /***/ }),
 /* 1 */
@@ -2606,6 +2646,114 @@ exports.default = function (idMap) {
 
 })));
 
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function (opt) {
+
+    var lang = document.querySelectorAll('[name=' + opt.name + ']');
+    lang.forEach(function (el) {
+        el.addEventListener('click', function () {
+            if (document.querySelector('[name=' + opt.name + ']:checked').value === opt.value) {
+                document.querySelector('#' + opt.id + '').classList.remove('hide');
+                console.log(document.querySelector('#' + opt.id + ''));
+            } else {
+                document.querySelector('#' + opt.id + '').classList.add('hide');
+            }
+        });
+    });
+};
+
+;
+
+/***/ }),
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function (city) {
+    title.innerHTML = infoModal[city].title;
+    subtitle.innerHTML = infoModal[city].subtitle;
+    content.innerHTML = infoModal[city].content;
+    url.setAttribute('href', infoModal[city].url);
+    image.style.backgroundImage = "url('" + infoModal[city].image + "')";
+};
+
+var infoModal = {
+    'bogota': {
+        'title': 'Bogotá',
+        'subtitle': '2600 metros mas cerca de las estrellas',
+        'content': 'A la sombra de Monserrate (3152 m), la capital colombiana se agita de sol a sol. El visitante quedará sorprendido por esta ciudad variopinta entre los rascacielos modernos y el barrio colonial de la Candelaria, que fue en gran parte destruido por una muchedumbre furiosa después del asesinato del muy popular líder liberal Gaitán en 1948 (El Bogotazo).',
+        'url': 'http://guayacantrace.com/bogota/',
+        'image': 'http://guayacantrace.com/wp-content/uploads/2018/09/slide-Bogota-2-e1536265838952.jpg'
+    },
+    'villa': {
+        'title': 'Villa de Leyva',
+        'subtitle': 'Origen de la leyenda del dorado',
+        'content': 'Fundada en 1572, Villa de Leyva, pueblo situado a 160 km al Nord-Este de Bogotá (3h00), es una de las joyas arquuitectónicas del pasado colonial de Colombia con sus balcones, sus calles empedradas y su inmensa plaza central de inigualable encanto. Fue en este pequeño pueblo en el que florecen hoy restaurantes y salones de té donde los libertadores Simón Bolívar, Antonio Nariño y Camilo Torres firmaron en 1812 las leyes de la Primera República Colombiana. ',
+        'url': 'http://guayacantrace.com/villa-de-leyva/',
+        'image': 'http://guayacantrace.com/wp-content/uploads/2018/09/slide-villa-de-leyva-1.jpg'
+    },
+    'choachi': {
+        'title': 'Choachi',
+        'subtitle': 'Ventana de la Luna',
+        'content': '¡Cambio total de paisajes a unos pocos kilómetros de Bogotá ! En unos cuantos minutos, la ciudad se esfuma por entre las montañas y deja lugar a los paisajes lunares del páramo, verdadera inmensidad silenciosa y brumosa que le da a uno ganas de perderse y olvidarse por un momento de la efervescencia del diario vivir y la civilización. Andar por unos caminos de piedra seculares (caminos reales) transformados en arroyos… Caminar hacia manantiales y lagunas… Subir a las cumbres… Senderistas principiantes o experimentados, cada uno quedará satisfecho por unas cuantas horas.',
+        'url': 'http://guayacantrace.com/choachi/',
+        'image': 'http://guayacantrace.com/wp-content/uploads/2018/09/slide-choachi-1-e1536340938271.jpg'
+    },
+    'guatavita': {
+        'title': 'Guatavita',
+        'subtitle': 'Origen de la leyenda del dorado\n',
+        'content': 'Descubran el lago sagrado de los indígenas muisca que dio su origen al mito de El Dorado, a 75 km al Norte de Bogotá (1h30 de carretera).\n' + '\n' + 'Durante su toma de poder, el cacique muisca se cubría de polvo de oro antes de lanzarse al agua desde una balsa en medio del lago ante la mirada de la comunidad que echaba objetos de oro al agua como ofrendas. En el Siglo XVI, el rito despertó las fantasías de los europeos que multiplicaron los intentos para recuperar el precioso metal que se había acumulado a través de los tiempos.',
+        'url': 'http://guayacantrace.com/guatavita/',
+        'image': 'http://guayacantrace.com/wp-content/uploads/2018/09/slide-Guatavita-1-e1536342467799.jpg'
+    },
+    'trait': {
+        'title': 'Senderismo / Trail',
+        'subtitle': 'Desafía tus limites',
+        'content': '¿Quién nunca ha soñado con praticar su pasión por el senderismo caminando por la selva tropical siguiendo las huellas de las civilizaciones precolombinas ? ¿Qué corredor no se ha imaginado un día recorriendo a buen paso los senderos de las montañas andinas ? GUAYACAN TRACE les propone experimentar la aventura colombiana mediante su pasión. En dos semanas, visiten los sitios naturales y culturales ineludibles de Colombia mientras va practicando su deporte favorito. Descubran primero Bogotá y sus alrededores. Caminatas deportivas, salidas de trail, tomen altura para admirar los paisajes andinos a más de 3500 metros de altura.',
+        'url': 'http://guayacantrace.com/senderismo-trail/',
+        'image': 'http://guayacantrace.com/wp-content/uploads/2018/09/foto-corredores-3.jpg'
+    }
+},
+    title = document.querySelector('#Modal-title'),
+    subtitle = document.querySelector('#Modal-subtitle'),
+    content = document.querySelector('#Modal-content'),
+    image = document.querySelector('#Modal-image'),
+    url = document.querySelector('#Modal-url');
+
+;
 
 /***/ })
 /******/ ]);

@@ -704,7 +704,7 @@
             <div class="container">
                 <div class="Plan-title">
                     <h1><?php the_title() ?></h1>
-                    <h2>agitandose de sol a sol</h2>
+                    <h2><?php get_post_meta(get_the_ID(), 'subtitulo')[0]?></h2>
                 </div>
             </div>
 

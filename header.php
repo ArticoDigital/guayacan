@@ -1,37 +1,56 @@
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes();?>>
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
+    <title><?php bloginfo('name');?><?php wp_title();?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/public/images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="<?php bloginfo('template_url')?>/public/images/favicon.ico" type="image/x-icon"/>
     <link rel="icon" type="image/png" sizes="32x32"
-          href="<?php bloginfo('template_url') ?>/public/images/favicon-32x32.png">
+          href="<?php bloginfo('template_url')?>/public/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96"
-          href="<?php bloginfo('template_url') ?>/public/images/favicon-96x96.png">
+          href="<?php bloginfo('template_url')?>/public/images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16"
-          href="<?php bloginfo('template_url') ?>/public/images/favicon-16x16.png">
+          href="<?php bloginfo('template_url')?>/public/images/favicon-16x16.png">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto:300,400,500,700,900|Walter+Turncoat" rel="stylesheet">
     <meta name="description" content="<?php if (is_single()) {
-        single_post_title('', true);
-    } else {
-        bloginfo('name');
-        echo " - ";
-        bloginfo('description');
-    }
-    ?>"/>
-    <?php wp_head() ?>
+    single_post_title('', true);
+} else {
+    bloginfo('name');
+    echo " - ";
+    bloginfo('description');
+}
+?>"/>
+    <?php wp_head()?>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_red.css"
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_red.css">
+    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Este sitio web utiliza cookies para garantizar que obtengas la mejor experiencia de navegación.","dismiss":"Acepto","learnMore":"Más información","theme":"dark-floating"};
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
 </head>
-<body <?php body_class(); ?> data-url="<?php echo site_url(); ?>" id="body">
-<header>
+<body <?php body_class();?> data-url="<?php echo site_url(); ?>" id="body">
+<header class="mobile row justify-between">
+    <figure class="Logo-mobile">
+        <a href="/"><img src="<?php bloginfo('template_url');?>/public/images/logo.png" alt=""></a>
+    </figure>
+    <div class="mobile-menuLine">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+<header class="desktop">
+
     <div class="Header-container row ">
-        <div class="Header-left row justify-end">
+         <div class="Header-left row justify-end">
             <figure class="Logo row align-center">
-                <a href="/"><img src="<?php bloginfo('template_url'); ?>/public/images/logo.png" alt=""></a>
+                <a href="/"><img src="<?php bloginfo('template_url');?>/public/images/logo.png" alt=""></a>
             </figure>
         </div>
         <div class="Header-right">
@@ -93,7 +112,7 @@
                         </ul>
                     </div>
                     <nav class="row justify-end Nav">
-                        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' )  ); ?>
+                        <?php wp_nav_menu(array('theme_location' => 'header-menu'));?>
                     </nav>
                 </div>
             </div>

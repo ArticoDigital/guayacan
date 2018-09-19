@@ -40,15 +40,23 @@
   margin-top: 1rem;
   background: #782a0b;
   padding: 2rem;
+  align-items: center;
   h2{
     color: #fdc801;
     font-size: 2rem;
+    margin-bottom: 2rem
   }
   h3{
     color: white;
-    font-size: 1.6
-
-    rem;
-
+    font-size: 1.6rem;
+    margin: 0 ;
+    padding-left: 2rem;
+  }
+}
+.Blog-container{
+  padding: 0 4rem;
+  h3{
+    color: #782a0b;
+    margin: 4rem 0 1rem;
   }
 }
