@@ -12,7 +12,10 @@
                 <img src="<?php bloginfo('template_url'); ?>/public/images/imgparalaxderecha.png" alt="">
             </div>
             <section class="Home-contact row justify-center">
-                PAISAJES QUE VIVIRÁN SIEMPRE EN TU SUEÑOS <span><a href=""> contáctanos</a></span>
+                <?php _e('PAISAJES QUE VIVIRÁN SIEMPRE EN TU SUEÑOS','guayacan'); ?>
+                 <span><a href="http://guayacantrace.com/reservar/">
+                         <?php _e('contáctanos','guayacan'); ?>
+                         </a></span>
             </section>
         </div>
         <section class="Map-svgContainer">
@@ -732,14 +735,14 @@
             </div>
         </section>
         <section class="Home-video">
-            <div class="Home-divisor  row justify-center">
-                ¡ES TU AVENTURA, TU VIAJE, TU CAMINO!
+            <div class="Home-divisor  row justify-center middle-items">
+                <?php _e('¡ES TU AVENTURA, TU VIAJE, TU CAMINO!','guayacan')?>
             </div>
             <?php echo do_shortcode("[rev_slider alias='video-home']"); ?>
         </section>
         <section class="Home-why ">
             <div class="Home-whyTop"></div>
-            <h2>¿PORQUÉ GUAYACAN TRACE?</h2>
+            <h2> <?php _e('¿PORQUÉ GUAYACAN TRACE?','guayacan')?>  </h2>
             <div class="container">
                 <ul class="is-list-less row justify-center">
                     <li>
@@ -764,7 +767,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <p>Contacto <br>espiritual</p>
+                        <p> <?php _e('Contacto','guayacan')?> <br><?php _e('espiritual','guayacan')?></p>
                     </li>
                     <li>
 
@@ -785,7 +788,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <p>Contacto con <br>la naturaleza</p>
+                        <p><?php _e('Contacto con','guayacan')?><br><?php _e('la naturaleza','guayacan')?></p>
                     </li>
                     <li>
 
@@ -815,7 +818,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <p>Contacto con <br>comunidades</p>
+                        <p><?php _e('CONTACTO CON','guayacan')?><br><?php _e('COMUNIDADES','guayacan')?></p>
                     </li>
                     <li>
 
@@ -831,7 +834,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <p>Leyendas <br>COSTUMBRES <br>E historias</p>
+                        <p><?php _e('LEYENDAS','guayacan')?> <br><?php _e('COSTUMBRES','guayacan')?> <br><?php _e('E HISTORIAS','guayacan')?></p>
                     </li>
                     <li>
 
@@ -857,7 +860,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <p>Caminatas y <br>Carreras</p>
+                        <p><?php _e('CAMINATAS Y','guayacan')?><br><?php _e('CARRERAS','guayacan')?></p>
                     </li>
                     <li>
 
@@ -879,7 +882,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <p>guias <br> expertos</p>
+                        <p><?php _e('GUIAS','guayacan')?> <br> <?php _e('EXPERTOS','guayacan')?></p>
                     </li>
                 </ul>
             </div>
@@ -895,7 +898,7 @@
                 $p = 1;
                 while ($the_query->have_posts()): $the_query->the_post(); ?>
                     <?php if ($p == 1): ?>
-                        <article class="col-9 Home-blogNew">
+                        <article class="col-l-9 col-16 Home-blogNew">
                             <figure>
                                 <?php the_post_thumbnail('first_post') ?>
                             </figure>
@@ -909,12 +912,12 @@
                             </div>
                         </article>
                     <?php else: ?>
-                        <?php if ($p == 2) echo '<div class="col-7 Home-blogNews">' ?>
+                        <?php if ($p == 2) echo '<div class="col-l-7 col-16 Home-blogNews">' ?>
                         <div class="row ">
-                            <figure class="col-7 is-text-center">
+                            <figure class="col-l-7  col-16  is-text-center">
                                 <img class="fit" src="<?php echo get_the_post_thumbnail_url() ?>" alt="">
                             </figure>
-                            <div class="col-9">
+                            <div class="  col-16 col-l-9">
                                 <h3> <?php the_title() ?> </h3>
                                 <p><?php echo excerpt(30) ?></p>
                                 <div class="row justify-end">
@@ -939,7 +942,7 @@
     <aside class="Modal-info row middle-items justify-center">
         <div class="Modal-close">X</div>
         <div class="Modal-infoContainer row ">
-            <div class="col-9 Modal-infoText">
+            <div class="col-l-9  col-16  Modal-infoText">
                 <h4 id="Modal-title"></h4>
                 <h5 id="Modal-subtitle"></h5>
                 <p id="Modal-content">
@@ -949,7 +952,7 @@
                 </div>
             </div>
 
-            <figure class="col-7 Modal-image" id="Modal-image">
+            <figure class="col-l-7  col-16  Modal-image" id="Modal-image">
 
             </figure>
         </div>

@@ -84,13 +84,13 @@ var _animatedScrollTo = __webpack_require__(4);
 
 var _animatedScrollTo2 = _interopRequireDefault(_animatedScrollTo);
 
-var _modal = __webpack_require__(23);
+var _modal = __webpack_require__(5);
 
 var _modal2 = _interopRequireDefault(_modal);
 
-var _es = __webpack_require__(5);
+var _es = __webpack_require__(6);
 
-var _ToggleInput = __webpack_require__(6);
+var _ToggleInput = __webpack_require__(7);
 
 var _ToggleInput2 = _interopRequireDefault(_ToggleInput);
 
@@ -107,9 +107,11 @@ if (document.querySelector('#Choachi')) {
             (0, _modal2.default)(el.dataset.city);
         });
     });
-    modalClose.addEventListener('click', function () {
-        modal.classList.remove('show');
-    });
+    if (modalClose) {
+        modalClose.addEventListener('click', function () {
+            modal.classList.remove('show');
+        });
+    }
 }
 (0, _flatpickr2.default)(".datePicker", {
     "locale": _es.Spanish
@@ -117,6 +119,7 @@ if (document.querySelector('#Choachi')) {
 
 document.querySelector('.contactID').addEventListener('click', function () {
     (0, _animatedScrollTo2.default)(document.querySelector('footer'));
+    document.querySelector('.mobile').classList.remove('open');
 });
 var Form = document.querySelector('#FormReserve');
 if (Form) {
@@ -145,6 +148,10 @@ if (Form) {
         value: 'si'
     });
 }
+
+document.querySelector('.mobile-menuLine').addEventListener('click', function () {
+    document.querySelector('.mobile').classList.toggle('open');
+});
 
 /***/ }),
 /* 1 */
@@ -2611,90 +2618,6 @@ exports.default = function (idMap) {
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* flatpickr v4.5.1, @license MIT */
-(function (global, factory) {
-     true ? factory(exports) :
-    typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (factory((global.es = {})));
-}(this, (function (exports) { 'use strict';
-
-    var fp = typeof window !== "undefined" && window.flatpickr !== undefined ? window.flatpickr : {
-      l10ns: {}
-    };
-    var Spanish = {
-      weekdays: {
-        shorthand: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
-        longhand: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
-      },
-      months: {
-        shorthand: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
-        longhand: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-      },
-      ordinal: function ordinal() {
-        return "º";
-      },
-      firstDayOfWeek: 1,
-      rangeSeparator: " a "
-    };
-    fp.l10ns.es = Spanish;
-    var es = fp.l10ns;
-
-    exports.Spanish = Spanish;
-    exports.default = es;
-
-    Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
-
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-exports.default = function (opt) {
-
-    var lang = document.querySelectorAll('[name=' + opt.name + ']');
-    lang.forEach(function (el) {
-        el.addEventListener('click', function () {
-            if (document.querySelector('[name=' + opt.name + ']:checked').value === opt.value) {
-                document.querySelector('#' + opt.id + '').classList.remove('hide');
-                console.log(document.querySelector('#' + opt.id + ''));
-            } else {
-                document.querySelector('#' + opt.id + '').classList.add('hide');
-            }
-        });
-    });
-};
-
-;
-
-/***/ }),
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
@@ -2752,6 +2675,74 @@ var infoModal = {
     content = document.querySelector('#Modal-content'),
     image = document.querySelector('#Modal-image'),
     url = document.querySelector('#Modal-url');
+
+;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* flatpickr v4.5.1, @license MIT */
+(function (global, factory) {
+     true ? factory(exports) :
+    typeof define === 'function' && define.amd ? define(['exports'], factory) :
+    (factory((global.es = {})));
+}(this, (function (exports) { 'use strict';
+
+    var fp = typeof window !== "undefined" && window.flatpickr !== undefined ? window.flatpickr : {
+      l10ns: {}
+    };
+    var Spanish = {
+      weekdays: {
+        shorthand: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
+        longhand: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+      },
+      months: {
+        shorthand: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+        longhand: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+      },
+      ordinal: function ordinal() {
+        return "º";
+      },
+      firstDayOfWeek: 1,
+      rangeSeparator: " a "
+    };
+    fp.l10ns.es = Spanish;
+    var es = fp.l10ns;
+
+    exports.Spanish = Spanish;
+    exports.default = es;
+
+    Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function (opt) {
+
+    var lang = document.querySelectorAll('[name=' + opt.name + ']');
+    lang.forEach(function (el) {
+        el.addEventListener('click', function () {
+            if (document.querySelector('[name=' + opt.name + ']:checked').value === opt.value) {
+                document.querySelector('#' + opt.id + '').classList.remove('hide');
+                console.log(document.querySelector('#' + opt.id + ''));
+            } else {
+                document.querySelector('#' + opt.id + '').classList.add('hide');
+            }
+        });
+    });
+};
 
 ;
 

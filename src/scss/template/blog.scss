@@ -1,5 +1,7 @@
 .Blog {
-  padding: 5rem;
+  @include respond-to(large){
+    padding: 5rem;
+  }
   & > div {
     padding: 0 2rem;
   }

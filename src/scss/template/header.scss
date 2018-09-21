@@ -1,19 +1,33 @@
-header.mobile{
+header.mobile {
   background: white;
   display: flex;
   position: relative;
-  z-index: 100000 ;
-  @include respond-to(large){
+  z-index: 100000;
+  @include respond-to(large) {
     display: none;
   }
+  &.open .mobile-menuLine {
+    transform: translateX(calc(-100vw + 68px));
+    will-change: translateX;
+  }
+  &.open .mobile-content {
+    transform: translateX(-100vw);
+    will-change: translateX;
+  }
 }
-.Logo-mobile{
+
+.Logo-mobile {
   margin: 1rem;
   max-width: 15rem;
 }
-.mobile-menuLine{
-  margin: 2.7rem 2rem 0;
-  span{
+
+.mobile-menuLine {
+  background: white;
+  padding: 2.5rem 1rem 2rem ;
+  transition: all .6s ease;
+  position: fixed;
+  right: 0;
+  span {
     display: block;
     height: .3rem;
     margin: .4rem;
@@ -21,15 +35,41 @@ header.mobile{
     background: #782a0b;
   }
 }
+
+.mobile-content {
+  transition: all .6s ease;
+  position: fixed;
+  background: #782a0b;
+  left: calc(100vw + 68px);
+  top: 0;
+  width: calc(100vw - 68px);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  #menu-menu-principal {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+
+  }
+  a {
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    margin: 1rem 0;
+  }
+}
+
 Header.desktop {
   background: linear-gradient(to bottom, #782a0b 50%, #fdc801 50%);
   position: relative;
   z-index: 10000;
   display: none;
-  @include respond-to(large){
+  @include respond-to(large) {
     display: block;
   }
-
 
   ul {
     height: 5rem;
@@ -39,7 +79,7 @@ Header.desktop {
     padding: 0 1rem;
     margin-top: .5rem;
 
-    &:hover>ul.sub-menu {
+    &:hover > ul.sub-menu {
       opacity: 1;
       height: auto;
       visibility: visible;
@@ -69,8 +109,7 @@ Header.desktop {
   position: relative;
 
   a {
-    color: #ffffff;
-    ;
+    color: #ffffff;;
   }
 
   &:before {

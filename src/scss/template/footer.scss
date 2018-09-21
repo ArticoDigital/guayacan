@@ -50,10 +50,14 @@ footer{
   }
   form{
       .first{
-        padding-right: .8rem;
+        @include respond-to(large){
+          padding-right: .8rem;
+        }
       }
       .last{
-        padding-left: .8rem;
+        @include respond-to(large){
+          padding-left: .8rem;
+        }
       }
   }
 }

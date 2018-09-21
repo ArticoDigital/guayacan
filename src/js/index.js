@@ -22,9 +22,11 @@ if (document.querySelector('#Choachi')) {
             modalClick(el.dataset.city)
         });
     });
-    modalClose.addEventListener('click', function () {
-        modal.classList.remove('show')
-    });
+    if(modalClose){
+        modalClose.addEventListener('click', function () {
+            modal.classList.remove('show')
+        });
+    }
 
 }
 flatpickr(".datePicker", {
@@ -33,6 +35,8 @@ flatpickr(".datePicker", {
 
 document.querySelector('.contactID').addEventListener('click', function () {
     animateScrollTo(document.querySelector('footer'));
+    document.querySelector('.mobile').classList.remove('open')
+
 });
 const Form = document.querySelector('#FormReserve');
 if (Form) {
@@ -62,3 +66,7 @@ if (Form) {
     });
 
 }
+
+document.querySelector('.mobile-menuLine').addEventListener('click', function () {
+    document.querySelector('.mobile').classList.toggle('open')
+});
