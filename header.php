@@ -55,7 +55,7 @@
         <div>
             <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
             <ul class="Nav-Lang is-list-less row justify-around align-center">
-                <li><a href="">
+                <li><a  hreflang="fr-FR" lang="fr-FR" href="http://guayacantrace.com/fr">
                         <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -110,7 +110,7 @@
                         </svg>
 
                     </a></li>
-                <li><a href="">
+                <li><a href="http://guayacantrace.com/" hreflang="es-CO" lang="es-CO">
                         <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

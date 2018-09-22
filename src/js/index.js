@@ -33,10 +33,12 @@ flatpickr(".datePicker", {
     "locale": Spanish
 });
 
-document.querySelector('.contactID').addEventListener('click', function () {
-    animateScrollTo(document.querySelector('footer'));
-    document.querySelector('.mobile').classList.remove('open')
+document.querySelectorAll('.contactID').forEach(function (el) {
+    el.addEventListener('click', function () {
+        animateScrollTo(document.querySelector('footer'));
+        document.querySelector('.mobile').classList.remove('open')
 
+    });
 });
 const Form = document.querySelector('#FormReserve');
 if (Form) {

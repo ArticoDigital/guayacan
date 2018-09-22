@@ -117,9 +117,11 @@ if (document.querySelector('#Choachi')) {
     "locale": _es.Spanish
 });
 
-document.querySelector('.contactID').addEventListener('click', function () {
-    (0, _animatedScrollTo2.default)(document.querySelector('footer'));
-    document.querySelector('.mobile').classList.remove('open');
+document.querySelectorAll('.contactID').forEach(function (el) {
+    el.addEventListener('click', function () {
+        (0, _animatedScrollTo2.default)(document.querySelector('footer'));
+        document.querySelector('.mobile').classList.remove('open');
+    });
 });
 var Form = document.querySelector('#FormReserve');
 if (Form) {
