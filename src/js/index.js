@@ -15,11 +15,12 @@ if (document.querySelector('#svg-id'))
 if (document.querySelector('#Choachi')) {
     const mapClick = document.querySelectorAll('.Map-click'),
         modal = document.querySelector('.Modal-info'),
-        modalClose = document.querySelector('.Modal-close');
+        modalClose = document.querySelector('.Modal-close'),
+        lang = document.querySelector('body').dataset.lang;
     mapClick.forEach(function (el) {
         el.addEventListener('click', function () {
             modal.classList.add('show');
-            modalClick(el.dataset.city)
+            modalClick(el.dataset.city, lang)
         });
     });
     if(modalClose){

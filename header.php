@@ -41,7 +41,7 @@
             src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
     <!-- End Cookie Consent plugin -->
 </head>
-<body <?php body_class(); ?> data-url="<?php echo site_url(); ?>" id="body">
+<body <?php body_class();  $currentlang = get_bloginfo('language');?> data-url="<?php echo site_url(); ?>" id="body" data-lang="<?php echo $currentlang ?>">
 <header class="mobile row justify-between">
     <figure class="Logo-mobile">
         <a href="/"><img src="<?php bloginfo('template_url'); ?>/public/images/logo.png" alt=""></a>
@@ -110,7 +110,7 @@
                         </svg>
 
                     </a></li>
-                <li><a href="http://guayacantrace.com/" hreflang="es-CO" lang="es-CO">
+                <li><a href="http://guayacantrace.com/es" hreflang="es-CO" lang="es-CO">
                         <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -198,7 +198,7 @@
                                     </svg>
                                     <span>ENGLISH</span>
                                 </a></li>
-                            <li><a href="http://guayacantrace.com/" hreflang="es-CO" lang="es-CO">
+                            <li><a href="http://guayacantrace.com/es" hreflang="es-CO" lang="es-CO">
                                     <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1"
                                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
