@@ -1,7 +1,11 @@
 <?php
 
+
 //add image in posts
 add_theme_support('post-thumbnails');
+set_post_thumbnail_size(300, 300);
+add_image_size('first_post', 662, 332);
+add_image_size('thumb_custom', 170, 170, array('left', 'top'));
 /**
  * define('themeDir', get_template_directory() . '/');
  * require(themeDir . 'functions/gallery.php');
@@ -61,24 +65,30 @@ function theme_js()
 }
 
 add_action('wp_enqueue_scripts', 'theme_js');
-/**
- * Create custom excerpt
- *
- * @param $count
- *
- * @return bool|string
- */
-function get_excerpt($count)
+
+function wpdocs_custom_excerpt_length($length)
 {
-    //$permalink = get_permalink($post->ID);
-    $excerpt = get_the_content();
-    $excerpt = strip_tags($excerpt);
-    $excerpt = substr($excerpt, 0, $count);
-    $excerpt = $excerpt . '...';
+    return 55;
+}
+
+add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
+
+
+function excerpt($limit)
+{
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+
+    if (count($excerpt) >= $limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ", $excerpt) . '...';
+    } else {
+        $excerpt = implode(" ", $excerpt);
+    }
+
+    $excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
 
     return $excerpt;
 }
-
 
 
 add_action('customize_register', 'customize_register_theme');
@@ -87,7 +97,7 @@ add_action('customize_register', 'customize_register_theme');
 function customize_register_theme($wp_customize)
 {
     $wp_customize->add_section('settings_theme', array(
-        'title' => __('ConfiguraciÃ³n Guayacan', 'guayacan'),
+        'title' => __('Configuraci¨®n Guayacan', 'guayacan'),
         'priority' => 35
     ));
 
@@ -99,7 +109,7 @@ function customize_register_theme($wp_customize)
         'transport' => 'postMessage'
     ));
     $wp_customize->add_control('phone', array(
-        'label' => __('TelÃ©fono', 'guayacan'),
+        'label' => __('Tel¨¦fono', 'guayacan'),
         'section' => 'settings_theme',
         'settings' => 'settings_theme[phone]',
     ));
@@ -131,5 +141,13 @@ function customize_register_theme($wp_customize)
 
 
 
-
+if ( function_exists('pll_languages_list') ) { 
+	add_action('wpml_loaded', '__return_true', 10, 0);
+	do_action('wpml_loaded');
+}
+add_action('after_setup_theme', 'my_theme_setup');
+function my_theme_setup()
+{
+    load_theme_textdomain('guayacan', get_template_directory() . '/languages');
+}
 

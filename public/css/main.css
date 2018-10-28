@@ -2590,4 +2590,36 @@ footer {
   .Blog > div {
     padding: 3rem; }
 
+.ReservationForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000; }
+  .ReservationForm-close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer; }
+  .ReservationForm-form {
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    background: #782a0b;
+    width: 100%;
+    max-width: 40rem;
+    margin: 1rem; }
+  .ReservationForm h4 {
+    color: var(--primary-color);
+    font-size: 2.4rem; }
+  .ReservationForm p {
+    font-size: 2.2rem;
+    color: white; }
+  .ReservationForm input {
+    margin: 1rem 0; }
+
 /*# sourceMappingURL=main.css.map*/

@@ -100,7 +100,7 @@ if (document.querySelector('#Choachi')) {
         modal.classList.remove('show');
     });
 }
-(0, _flatpickr2.default)(".datePicker", { "locale": _es.Spanish });
+(0, _flatpickr2.default)(".datePicker", { "locale": _es.Spanish, mode: "range" });
 
 document.querySelector('.contactID').addEventListener('click', function () {
     (0, _animatedScrollTo2.default)(document.querySelector('footer'));
