@@ -6,30 +6,48 @@
 .landscape-left, .landscape-center, .landscape-right {
   position: absolute;
   bottom: 5rem;
+  opacity: 0;
+  @include respond-to(medium) {
+    opacity: 1;
+  }
 }
 
 .landscape-right {
   right: 0;
 }
 
-
 .Home-contact {
   position: absolute;
   background: url("../images/home-contact.png") repeat center;
-  padding-top: 13.5rem;
+  padding-top: 13rem;
   bottom: -5rem;
   width: 100vw;
   height: 23.6rem;
   max-height: 23.6rem;
   color: white;
-  font-size: 3rem;
+  font-size: 1.3rem;
+  max-width: 100%;
+  text-align: center;
+  @include respond-to(medium) {
+    font-size: 2.4rem;
+  }
+  @include respond-to(large) {
+    font-size: 2.8rem;
+    padding-top: 13.5rem;
+  }
   a {
     background: #fdc801;
     color: #782a0b;
     display: inline-block;
     padding: .1rem 2rem;
-    margin-left: 2rem;
     border-radius: .6rem;
+    position: relative;
+    top: -2rem;
+    @include respond-to(large) {
+      font-size: 3rem;
+      margin-left: 2rem;
+      position: static;
+    }
   }
 }
 
@@ -57,27 +75,31 @@
   }
 }
 
-#Choachi{
+#Choachi, #Bogota, #Guatavita, #Villa, #Cartagena, #SantaMarta {
   cursor: pointer;
   &:hover {
-    fill: red
+    > path:first-child {
+      fill: #fdc801
+    }
+
   }
 }
 
-.Modal-info{
+.Modal-info {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,.8);
+  background: rgba(0, 0, 0, .8);
   display: none;
   z-index: 1000;
-  &.show{
+  &.show {
     display: flex;
   }
 }
-.Modal-close{
+
+.Modal-close {
   position: absolute;
   top: 4rem;
   right: 4rem;
@@ -87,39 +109,44 @@
   cursor: pointer;
 }
 
-.Modal-infoContainer{
+.Modal-infoContainer {
   background: white;
   padding: 3rem;
   border-radius: .5rem;
   max-width: 90%;
   width: 80rem;
-  h4{
+  max-height: 70vh;
+  overflow: scroll;
+  h4 {
     font-weight: 400;
     font-size: 5rem;
     text-transform: uppercase;
     color: #FF281F;
-    text-shadow: .4rem .2rem #fdc801;
+    text-shadow: .4rem .2rem;
     line-height: 1em;
   }
-  h5{
+  h5 {
     font-size: 2.4rem;
     line-height: 1em;
     color: #782a0b;
   }
-  a{
+  a {
     background: #fdc801;
     color: #782a0b;
     padding: .4rem 6rem .3rem;
     border-radius: .4rem
   }
-  p{
+  p {
     font-size: 1.4rem;
     font-weight: 400;
     margin: 1.6rem 0;
   }
 }
-.Modal-infoText{
-  padding-right: 3rem;
+
+.Modal-infoText {
+  @include respond-to(large) {
+    padding-right: 3rem;
+  }
 }
 
 .Home-video {
@@ -129,28 +156,45 @@
 .Home-divisor {
   position: absolute;
   background: url("../images/intermediogris.png") repeat center;
-  padding-top: 9.5rem;
   width: 100vw;
-  height: 23.6rem;
+  height: 16.6rem;
   max-height: 23.6rem;
-  font-size: 3.6rem;
-  top: -94px;
+  font-size: 1.5rem;
+  top: -108px;
   z-index: 10;
   color: #782a0b;
+  text-align: center;
+  background-size: cover;
+  @include respond-to(medium) {
+    font-size: 2.6rem;
+    top: -94px;
+    height: 18.6rem;
+  }
+  @include respond-to(large) {
+    font-size: 3.6rem;
+    top: -94px;
+    background-size: auto;
+    height: 23.6rem;
+  }
+
 }
 
 .Home-why {
-  background: url("../images/texturamarilla.png") repeat;
+  background: url("../images/texturahomeamarillo.png") repeat;
   position: relative;
   h2 {
     position: relative;
     z-index: 20;
     text-align: center;
     color: #FF281F;
-    font-size: 4.5rem;
-    border-bottom: 4px solid;
-    width: 680px;
+    font-size: 2rem;
+    max-width: 70rem;
     margin: auto;
+    padding: 3rem 1rem 0;
+    @include respond-to(medium) {
+      font-size: 4.5rem;
+      padding: 0;
+    }
   }
   svg {
     margin: 0 auto 1rem;
@@ -160,12 +204,16 @@
   p {
     line-height: 1em;
     font-size: 2rem;
-    text-align: center;
+    text-align: center !important;
     text-transform: uppercase;
+    max-width: 16rem;
   }
   li {
     min-width: 14.8rem;
     padding: 4rem 3rem 0;
+    max-width: 50%;
+    @include respond-to(large) {
+    }
   }
   .container {
     position: relative;
@@ -174,16 +222,22 @@
 }
 
 .Home-whyTop {
-  background: url("../images/intermedioamarillo.png") repeat center;
+  background: url("../images/imghomeamarillo.png") repeat center;
   width: 100%;
-  height: 22rem;
   position: absolute;
-  top: -16.5rem;
+  top: -3.5rem;
   z-index: 10;
+  height: 6rem;
+  background-size: cover;
+  @include respond-to(large) {
+    height: 22rem;
+    background-size: auto;
+    top: -16.5rem;
+  }
 }
 
 .Home-whyBottom {
-  background: url("../images/intermedioamarillo.png") repeat center;
+  background: url("../images/imghomeamarillo.png") repeat center;
   width: 100%;
   height: 22rem;
   position: absolute;
@@ -193,7 +247,7 @@
 }
 
 .Home-blog {
-  background: url("../images/texturagris.png") repeat center;
+  background: url("../images/texturagris02.png") repeat center;
   h2 {
     padding-top: 10rem;
     text-align: center;
@@ -227,6 +281,10 @@
 
 .Home-blogNew {
   position: relative;
+  max-height: 55rem;
+  img {
+    height: auto;
+  }
 }
 
 .Home-blogNewText {
@@ -236,6 +294,36 @@
   background: #ffffffe6;
   position: relative;
   width: 100%;
-  top: -11.7rem;
+  top: -6.7rem;
   margin-bottom: -3rem;
+  @include respond-to(large) {
+    top: -11.7rem;
+  }
+
+}
+
+.Modal-image {
+  width: 37rem;
+  height: 37rem;
+  background-position: center;
+  background-size: cover;
+  margin-top: 3rem;
+  @include respond-to(large) {
+    margin-top: 0;
+  }
+}
+
+.Footer-formContainerImage {
+  position: relative;
+  img {
+    position: absolute;
+    right: -30px;
+    top: -5px;
+  }
+}
+
+.Map-click:hover {
+  path {
+    background: red;
+  }
 }

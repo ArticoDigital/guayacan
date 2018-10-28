@@ -704,7 +704,11 @@
             <div class="container">
                 <div class="Plan-title">
                     <h1><?php the_title() ?></h1>
+<<<<<<< HEAD
                    <h2><?php echo get_post_meta(get_the_ID(), 'subtitulo')[0] ?></h2>
+=======
+                    <h2><?php get_post_meta(get_the_ID(), 'subtitulo')[0]?></h2>
+>>>>>>> a415cffe7f132c9053bccbf9908f79ae3f1c7a2c
                 </div>
             </div>
 

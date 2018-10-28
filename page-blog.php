@@ -50,5 +50,9 @@
                 ?>
             </article>
         </div>
+<<<<<<< HEAD
     </main>
+=======
+    </main
+>>>>>>> a415cffe7f132c9053bccbf9908f79ae3f1c7a2c
 <?php get_footer();

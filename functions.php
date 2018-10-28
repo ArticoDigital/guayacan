@@ -138,8 +138,11 @@ function customize_register_theme($wp_customize)
         'settings' => 'settings_theme[ins]',
     ));
 }
-
-
+add_action('after_setup_theme', 'my_theme_setup');
+function my_theme_setup()
+{
+    load_theme_textdomain('luker', get_template_directory() . '/languages');
+}
 
 if ( function_exists('pll_languages_list') ) { 
 	add_action('wpml_loaded', '__return_true', 10, 0);

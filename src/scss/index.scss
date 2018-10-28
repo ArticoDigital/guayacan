@@ -29,10 +29,9 @@
 }
 
 body {
-  //font-family: 'Roboto', sans-serif;
   font-weight: 600;
   letter-spacing: .2rem;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Walter Turncoat', cursive;
   overflow-x: hidden;
 }
 
@@ -48,6 +47,7 @@ h3 {
 p {
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
+  text-align: justify !important;
 }
 
 .middle-items {
@@ -84,6 +84,7 @@ p {
 @import "template/footer";
 @import "template/blog";
 
+<<<<<<< HEAD
 .ReservationForm {
   position: fixed;
   top: 0;
@@ -120,5 +121,18 @@ p {
   input {
     margin: 1rem 0;
   }
+=======
+input.hide, div.hide{
+  display: none !important
+}
+
+img.fit {
+  object-fit: cover;
+  width: 170px;
+  height: 170px;
+}
+.Blog-postRecentItem {
+  margin: 2rem 0;
+>>>>>>> a415cffe7f132c9053bccbf9908f79ae3f1c7a2c
 }
 

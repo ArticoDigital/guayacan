@@ -13,11 +13,16 @@ footer{
     }
   }
   h3{
-    font-size: 1.6rem;
-    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin: 1rem 0;
+    font-family: 'Walter Turncoat', cursive;
+  }
+  h4{
     color: #fdc801;
-    font-family: 'Permanent Marker', cursive;
-    margin: .5rem 0;
+    font-size: 1.4rem;
+    font-family: 'Walter Turncoat', cursive;
+    margin: 0 0 2rem;
   }
   button{
     font-family: 'Permanent Marker', cursive;
@@ -45,10 +50,14 @@ footer{
   }
   form{
       .first{
-        padding-right: .8rem;
+        @include respond-to(large){
+          padding-right: .8rem;
+        }
       }
       .last{
-        padding-left: .8rem;
+        @include respond-to(large){
+          padding-left: .8rem;
+        }
       }
   }
 }
