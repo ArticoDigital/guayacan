@@ -1,0 +1,263 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-09-20 22:23-0500\n"
+"PO-Revision-Date: 2018-09-22 18:48-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Nuevo"
+msgstr "Nouvelles"
+
+msgid "PAISAJES QUE VIVIRÁN SIEMPRE EN TU SUEÑOS"
+msgstr "DES PAYSAGES QUI VIVRONT POUR TOUJOURS DANS VOS RÊVES"
+
+msgid "contáctanos"
+msgstr "NOUS CONTACTER"
+
+msgid "¿PORQUÉ GUAYACAN TRACE?"
+msgstr "POURQUOI GUAYACAN TRACE ?"
+
+msgid "¡ES TU AVENTURA, TU VIAJE, TU CAMINO!"
+msgstr "C´EST TON AVENTURE, TON VOYAGE, TON CHEMIN !"
+
+msgid "Contacto"
+msgstr "l’expérience"
+
+msgid "espiritual"
+msgstr "spirituelle"
+
+msgid "Contacto con"
+msgstr "le contact "
+
+msgid "la naturaleza"
+msgstr "avec la nature"
+
+msgid "CONTACTO CON"
+msgstr "échanger avec"
+
+msgid "COMUNIDADES"
+msgstr "les communautés"
+
+msgid "LEYENDAS"
+msgstr "légendes"
+
+msgid "COSTUMBRES"
+msgstr "coutumes"
+
+msgid "E HISTORIAS"
+msgstr "histoires"
+
+msgid "CAMINATAS Y"
+msgstr "marcher"
+
+msgid "CARRERAS"
+msgstr "courir"
+
+msgid "GUIAS"
+msgstr "des guides"
+
+msgid "EXPERTOS"
+msgstr "expérimentés"
+
+msgid "Para más preguntas"
+msgstr "Pour plus de questions ou"
+
+msgid "o personalizar su viaje..."
+msgstr "pour personnaliser votre voyage"
+
+msgid "Su nombre"
+msgstr "NOM"
+
+msgid "Su correo electrónico"
+msgstr "COURRIER ELECTRONIQUE"
+
+msgid "Su teléfono de contacto"
+msgstr "TELEPHONE"
+
+msgid "Asunto"
+msgstr "OBJET"
+
+msgid "Escriba aquí su mensaje"
+msgstr "Ecrivez votre message ici…"
+
+msgid "Comprendemos que cada persona tiene preferencias distintas a la hora de viajar, por esta razón decidimos crear el producto Viajes  la Medida” en el cual nos tomamos el tiempo para comprender tus deseos y expectativas, con el fin de crear el itinerario ideal, teniendo en cuenta factores como el tiempo, los destinos, las actividades y el presupuesto; todo esto con el fin  de ayudarte a crear un itinerario que se ajuste a tus expectativas, logrando la mezcla perfecta de experiencias, aventura, cultura, deporte y paisajes aturales"
+msgstr "Conscients que chaque personne a des préférences distinctes à l´heure de voyager, nous avons décidé de créer le « séjour sur mesure » dans lequel nous prenons le temps de comprendre vos désirs afin de créer pour vous l’itinéraire idéal qui prendra en compte des facteurs comme la durée de votre séjour, les destinations envisagées, les activités souhaitées et votre budget. Que vous cherchiez l’aventure, la culture, le sport, les paysages naturels, GUAYACAN TRACE vous aide à monter un séjour qui s’ajuste à vos attentes."
+
+msgid "Si estás interesado en recibir una propuesta de los viajes a la medida que ofrecemos, por favor llena el siguiente formulario y te estaremos enviando de vuelta una propuesta con los posibles itinerarios que más se ajustan a tu perfil."
+msgstr "Pour recevoir une proposition de « séjour sur mesure », veuillez remplir le formulaire suivant. Vous recevrez une proposition de séjour qui s’ajuste le mieux possible à votre profil."
+
+msgid "Información personal"
+msgstr "INFORMATIONS PERSONNELLES"
+
+msgid "Nombre y Apellido"
+msgstr "NOM PRENOM"
+
+msgid "Correo electrónico"
+msgstr "COURRIER ELECTRONIQUE"
+
+msgid "No de contacto"
+msgstr "TELEPHONE"
+
+msgid "País de residencia"
+msgstr "PAYS"
+
+msgid "Idioma"
+msgstr "Langue"
+
+msgid "Francés"
+msgstr "Français"
+
+msgid "Español"
+msgstr "Espagnol"
+
+msgid "Inglés"
+msgstr "Anglais"
+
+msgid "Otro"
+msgstr "Autre"
+
+msgid "Información de viaje"
+msgstr "INFORMATIONS SUR LE SEJOUR"
+
+msgid "¿Cuánto tiempo planea estar en Colombia?"
+msgstr "Combien de temps séjournez-vous en Colombie ?"
+
+msgid "Su viaje lo realizaría…"
+msgstr "Vous réalisez votre voyage…"
+
+msgid "Solo"
+msgstr "seul"
+
+msgid "Pareja"
+msgstr "en couple"
+
+msgid "Familia"
+msgstr "en famille"
+
+msgid "Grupo"
+msgstr "en groupe"
+
+msgid "¿Le gustaría viajar con otros grupos de personas?"
+msgstr "Souhaitez-vous voyager avec d’autres personnes ?"
+
+msgid "No me incomoda"
+msgstr "cela ne me dérange pas"
+
+msgid "Prefiero hacerlo solo"
+msgstr "je préfère voyager seul"
+
+msgid "Viajo con mi grupo"
+msgstr "je voyage déjà avec un groupe"
+
+msgid "¿Qué le interesa?"
+msgstr "CENTRES D’INTERET"
+
+msgid "Usted se define como una persona que…"
+msgstr "Vous vous définissez comme une personne qui …"
+
+msgid "Le gusta el confort y la tranquilidad"
+msgstr "aime le confort et la tranquillité"
+
+msgid "Le gusta la aventura y desafiar sus limites"
+msgstr "aime l’aventure et dépasser ses limites"
+
+msgid "Le gusta ser sorprendido y vivir de manera diferente"
+msgstr "aime être surprise et vivre de manière différente"
+
+msgid "¿Qué tipo de experiencias busca para su viaje?"
+msgstr "Quel type d’expérience recherchez-vous ?"
+
+msgid "Contacto con la naturaleza"
+msgstr "le contact avec la nature"
+
+msgid "Contacto con comunidades locales"
+msgstr "le contact avec les communautés locales"
+
+msgid "Conocer la cultura colombiana"
+msgstr "connaître la culture colombienne"
+
+msgid "Practicar deporte"
+msgstr "pratiquer des activités sportives"
+
+msgid "¿Qué clase de lugares le gustaría visitar en Colombia?"
+msgstr "Quel genre d’endroits aimeriez-vous visiter en Colombie?"
+
+msgid "Playas"
+msgstr "les plages"
+
+msgid "Montañas"
+msgstr "les montagnes"
+
+msgid "Selva"
+msgstr "la forêt"
+
+msgid "Centros Urbanos"
+msgstr "les centres urbains"
+
+msgid "Durante su estadía en Colombia, le gustaría transportarse a varios lugares sin importar la distancia o prefiere estar en un solo lugar?"
+msgstr "Durant votre séjour en Colombie, quel rythme souhaitez-vous adopter ?"
+
+msgid "Quiero conocer varios lugares, sin recorrer largas distancias."
+msgstr "je veux connaître différents endroits sans parcourir de longues distances"
+
+msgid "Quiero ir a varios lugares, sin importar la distancia entre el uno y el otro."
+msgstr "je veux connaître différents endroits peu importe leur distance"
+
+msgid "Quiero conocer un solo lugar"
+msgstr " je ne veux connaître qu’un seul endroit"
+
+msgid "¿Es importante para usted tener en su itinerario tiempos de descanso y relajación?"
+msgstr "Est-ce important pour vous d’aménager des temps de repos?"
+
+msgid "Me gustaría relajarme en un solo lugar"
+msgstr "j’aimerais me reposer dans un seul endroit"
+
+msgid "Me gustaría visitar varios lugares con tiempos de descanso en cada uno"
+msgstr "j’aimerais visiter de nombreux endroits avec un temps de repos dans chacun d’eux"
+
+msgid "Quiero conocer varios lugares sin importar el descanso "
+msgstr "je veux connaître un maximum d’endroits, peu importe que je me repose"
+
+msgid "¿Cuál el rango de presupuesto para su itinerario en Colombia? Sin incluir tiketes aéreos"
+msgstr "Sans inclure le billet d’avion, quel budget envisagez-vous pour votre voyage ?"
+
+msgid "US$1000 – US$2000"
+msgstr "1000 – 2000"
+
+msgid "US$2000 – US$3000"
+msgstr "2000 – 3000"
+
+msgid "US$3000 – US$4000"
+msgstr "1000 – 2000"
+
+msgid "Mas de US$4.000"
+msgstr "Mas de US$4.000"
+
+msgid "¿Desearía contar con un intérprete durante su viaje?"
+msgstr "Pensez-vous avoir besoin d’un interprète durant votre séjour ?"
+
+msgid "Si"
+msgstr "oui"
+
+msgid "No"
+msgstr "non"
+
+msgid "He leído y acepto la política de confidencialidad "
+msgstr "J’ai lu et j’accepte la politique de confidentialité"
+
+msgid "Ver políticas"
+msgstr "VOIR"
+
+msgid "Enviar"
+msgstr " ENVOYER"
+
+msgid "¿Que otro tipo de información considera que es importante para tener en cuenta en su itinerario?"
+msgstr "Informations supplémentaires à prendre en compte lors de votre séjour…"

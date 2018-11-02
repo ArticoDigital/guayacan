@@ -84,6 +84,44 @@ p {
 @import "template/footer";
 @import "template/blog";
 
+<<<<<<< HEAD
+.ReservationForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, .7);
+  z-index: 1000;
+  &-close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+  &-form {
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    background: #782a0b;
+    width: 100%;
+    max-width: 40rem;
+    margin: 1rem;
+  }
+  h4 {
+    color: var(--primary-color);
+    font-size: 2.4rem;
+  }
+  p{
+    font-size: 2.2rem;
+    color: white;
+  }
+  input {
+    margin: 1rem 0;
+  }
+=======
 input.hide, div.hide{
   display: none !important
 }
@@ -95,5 +133,6 @@ img.fit {
 }
 .Blog-postRecentItem {
   margin: 2rem 0;
+>>>>>>> a415cffe7f132c9053bccbf9908f79ae3f1c7a2c
 }
 

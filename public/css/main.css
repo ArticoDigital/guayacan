@@ -2276,7 +2276,7 @@ Header.desktop {
       font-size: 2.4rem; } }
   @media (min-width: 920px) {
     .Home-contact {
-      font-size: 3rem;
+      font-size: 2.8rem;
       padding-top: 13.5rem; } }
   .Home-contact a {
     background: #fdc801;
@@ -2554,7 +2554,7 @@ Header.desktop {
     text-transform: uppercase;
     color: red;
     text-shadow: 2px 1px 0 yellow;
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: bold;
     line-height: 1em;
     text-align: right; }

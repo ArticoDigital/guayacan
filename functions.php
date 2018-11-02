@@ -97,7 +97,7 @@ add_action('customize_register', 'customize_register_theme');
 function customize_register_theme($wp_customize)
 {
     $wp_customize->add_section('settings_theme', array(
-        'title' => __('ConfiguraciÃ³n Guayacan', 'guayacan'),
+        'title' => __('Configuraci¨®n Guayacan', 'guayacan'),
         'priority' => 35
     ));
 
@@ -109,7 +109,7 @@ function customize_register_theme($wp_customize)
         'transport' => 'postMessage'
     ));
     $wp_customize->add_control('phone', array(
-        'label' => __('TelÃ©fono', 'guayacan'),
+        'label' => __('Tel¨¦fono', 'guayacan'),
         'section' => 'settings_theme',
         'settings' => 'settings_theme[phone]',
     ));
@@ -144,5 +144,13 @@ function my_theme_setup()
     load_theme_textdomain('luker', get_template_directory() . '/languages');
 }
 
-
+if ( function_exists('pll_languages_list') ) { 
+	add_action('wpml_loaded', '__return_true', 10, 0);
+	do_action('wpml_loaded');
+}
+add_action('after_setup_theme', 'my_theme_setup');
+function my_theme_setup()
+{
+    load_theme_textdomain('guayacan', get_template_directory() . '/languages');
+}
 
