@@ -34,6 +34,7 @@ flatpickr(".datePicker", {
 });
 
 document.querySelector('.contactID').addEventListener('click', function () {
+
     animateScrollTo(document.querySelector('footer'));
     document.querySelector('.mobile').classList.remove('open')
 

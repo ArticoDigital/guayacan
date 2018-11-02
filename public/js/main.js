@@ -118,6 +118,7 @@ if (document.querySelector('#Choachi')) {
 });
 
 document.querySelector('.contactID').addEventListener('click', function () {
+
     (0, _animatedScrollTo2.default)(document.querySelector('footer'));
     document.querySelector('.mobile').classList.remove('open');
 });
